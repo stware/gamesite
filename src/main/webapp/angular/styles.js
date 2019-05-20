@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\WORK\PROJECTS\my-project\src\styles.less */"./src/styles.less");
+module.exports = __webpack_require__(/*! c:\WORK\PROJECTS\my-project\src\styles.less */"./src/styles.less");
 
 
 /***/ })
