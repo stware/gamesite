@@ -8,6 +8,7 @@ it\sturrini\gamesite\model\map\MapTypes.class
 it\sturrini\gamesite\events\EventRule.class
 it\sturrini\gamesite\model\map\GridItem.class
 it\sturrini\gamesite\controllers\InitContextListener.class
+it\sturrini\gamesite\timedexecutor\TimedExecutor.class
 it\sturrini\gamesite\model\Dimension.class
 it\sturrini\gamesite\api\conf\HostInfo.class
 it\sturrini\gamesite\api\conf\HTTPServletUtil.class
@@ -16,6 +17,7 @@ it\sturrini\gamesite\controllers\actionrules\ActionsEnum.class
 it\sturrini\gamesite\events\EventRulesExecutor.class
 it\sturrini\gamesite\api\conf\OptionsMethodMapper.class
 it\sturrini\gamesite\controllers\ControllerWithEvents.class
+it\sturrini\gamesite\api\MapService.class
 it\sturrini\gamesite\controllers\actionrules\ActionBaseRule.class
 it\sturrini\gamesite\controllers\MapController.class
 it\sturrini\gamesite\controllers\PlayerActionsController.class
@@ -32,7 +34,6 @@ it\sturrini\gamesite\model\map\Buildings.class
 it\sturrini\gamesite\controllers\MapElementController.class
 it\sturrini\gamesite\dao\mongo\MongoClient.class
 it\sturrini\gamesite\model\map\Map.class
-it\sturrini\gamesite\controllers\GameContext.class
 it\sturrini\gamesite\model\GridRow.class
 it\sturrini\gamesite\api\conf\GenericExceptionMapper.class
 it\sturrini\common\exception\GamesiteException.class
@@ -53,8 +54,10 @@ it\sturrini\gamesite\api\conf\BaseResource.class
 it\sturrini\common\StringUtil.class
 it\sturrini\gamesite\controllers\player\ManageScore.class
 it\sturrini\gamesite\api\conf\ResourceUtil$2.class
+it\sturrini\gamesite\controllers\game\GameContext.class
 it\sturrini\gamesite\api\PlayerService.class
 it\sturrini\gamesite\api\conf\IncludeResourceServletResponseWrapper.class
+it\sturrini\gamesite\controllers\game\ManagePlayers.class
 it\sturrini\gamesite\api\conf\MimeTypeUtil.class
 it\sturrini\gamesite\controllers\actionrules\ActionRule.class
 it\sturrini\gamesite\dao\mongo\GridItemInterfaceDeserializer.class

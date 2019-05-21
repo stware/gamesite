@@ -83,12 +83,12 @@ public class MapController extends ControllerWithEvents {
 
 	}
 
-	public Player getPlayer(String playerId) throws GamesiteException {
+	public Map getById(String id) throws GamesiteException {
 
-		if (playerId == null) {
+		if (id == null) {
 			throw new GamesiteException();
 		}
-		Player p = (Player) MongoDao.getInstance(Player.class).findById(playerId);
+		Map p = (Map) MongoDao.getInstance(Map.class).findById(id);
 		if (p != null) {
 			return p;
 		} else {
@@ -97,11 +97,11 @@ public class MapController extends ControllerWithEvents {
 
 	}
 
-	public List<Player> findPlayers(SearchFilter sf) throws GamesiteException {
+	public List<Map> find(SearchFilter sf) throws GamesiteException {
 
-		List<Player> players = MongoDao.getInstance(Player.class).findByFilter(sf);
-		if (players != null) {
-			return players;
+		List<Map> maps = MongoDao.getInstance(Map.class).findByFilter(sf);
+		if (maps != null) {
+			return maps;
 		} else {
 			throw new GamesiteException();
 		}

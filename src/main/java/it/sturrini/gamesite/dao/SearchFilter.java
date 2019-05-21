@@ -20,4 +20,11 @@ public class SearchFilter {
 		this.params = params;
 	}
 
+	public void addParam(String key, Object value) {
+		if (this.params == null) {
+			params = new HashMap<>();
+		}
+		params.put(key, value);
+	}
+
 }

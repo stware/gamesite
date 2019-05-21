@@ -161,10 +161,13 @@ public class MongoDao<T extends BaseEntity> {
 
 	public List<T> findByFilter(SearchFilter sf) {
 		List<Document> andConditions = new ArrayList<>();
-		Set<Entry<String, Object>> entrySet = sf.getParams().entrySet();
-		for (Entry<String, Object> entry : entrySet) {
-			andConditions.add(new Document(entry.getKey(), entry.getValue()));
+		if (sf != null) {
+			Set<Entry<String, Object>> entrySet = sf.getParams().entrySet();
+			for (Entry<String, Object> entry : entrySet) {
+				andConditions.add(new Document(entry.getKey(), entry.getValue()));
+			}
 		}
+
 		FindIterable<Document> db;
 		List<T> out = new ArrayList<>();
 		if (andConditions.size() > 0) {

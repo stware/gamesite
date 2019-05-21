@@ -12,7 +12,6 @@ C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\events\Ev
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\conf\HTTPServletUtil.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\SimpleServlet.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\dao\mongo\ObjectIdSerializer.java
-C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\GameContext.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\conf\GenericExceptionMapper.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\ControllerWithEvents.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\map\LandTypes.java
@@ -20,10 +19,12 @@ C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\conf\
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\dao\mongo\ObjectIdDeserializer.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\map\Map.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\actionrules\ActionRulesExecutor.java
+C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\MapService.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\MapController.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\conf\BaseResponse.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\GamesiteApplication.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\map\Streets.java
+C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\game\ManagePlayers.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\Player.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\dao\MongoDao.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\player\ManageScore.java
@@ -36,6 +37,7 @@ C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controlle
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\MapElementController.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\actionrules\ActionBaseRule.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\map\MapElement.java
+C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\timedexecutor\TimedExecutor.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\common\Constants.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\server\GameServer.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\events\EventRule.java
@@ -45,6 +47,7 @@ C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\map
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\events\EventRulesExecutor.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\GridRow.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\conf\ResponseHeadersFilter.java
+C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\game\GameContext.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\Grid.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\conf\IncludeResourceServletResponseWrapper.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\PlayerActionsService.java

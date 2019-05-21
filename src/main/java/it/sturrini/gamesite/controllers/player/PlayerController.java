@@ -10,9 +10,9 @@ import org.bson.types.ObjectId;
 import it.sturrini.common.DateUtils;
 import it.sturrini.common.exception.GamesiteException;
 import it.sturrini.gamesite.controllers.ControllerWithEvents;
-import it.sturrini.gamesite.controllers.GameContext;
 import it.sturrini.gamesite.controllers.MapController;
 import it.sturrini.gamesite.controllers.MapElementController;
+import it.sturrini.gamesite.controllers.game.GameContext;
 import it.sturrini.gamesite.dao.MongoDao;
 import it.sturrini.gamesite.dao.SearchFilter;
 import it.sturrini.gamesite.events.Event;
@@ -99,6 +99,7 @@ public class PlayerController extends ControllerWithEvents {
 				throw new GamesiteException();
 			}
 			Player logged = collect.get(0);
+			fireEvent(Event.login, logged);
 			String out = "Welcome, " + logged.getNickname() + "! The server " + DateUtils.sdf.format(GameContext.getInstance().getGameServer().getServerTime());
 			return out;
 		} else {
@@ -151,8 +152,24 @@ public class PlayerController extends ControllerWithEvents {
 	@Override
 	public List<String> onEvent(Event e, BaseEntity be) {
 		super.onEvent(e, be);
-		List<String> result = EventRulesExecutor.getInstance().executeRules(e, be);
+		List<String> result = EventRulesExecutor.getInstance().executeRules(this.getClass().getSimpleName(), e, be);
 		return result;
+	}
+
+	public void addPoint(Long millis) {
+		List<Player> players = MongoDao.getInstance(Player.class).findByFilter(null);
+		for (Player player : players) {
+			String a = DateUtils.getMinuteSecond(player.getInsertTimestamp());
+			String b = DateUtils.getMinuteSecond(millis);
+			// log.debug(a + ":" + b);
+			if (a.equals(b) && player.getPoints() < 10) {
+				log.debug("Adding point to player " + player.getNickname());
+				player.addPoints(1);
+				MongoDao.getInstance(Player.class).saveOrUpdate(player);
+			}
+
+		}
+
 	}
 
 }

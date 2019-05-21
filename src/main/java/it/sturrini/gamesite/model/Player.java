@@ -23,6 +23,9 @@ public class Player extends BaseEntity implements Serializable {
 	@JsonDeserialize(using = LongDeserializer.class)
 	protected Long score;
 
+	@JsonDeserialize(using = LongDeserializer.class)
+	protected Long points;
+
 	protected String cityId;
 
 	public Player() throws InstantiationException, IllegalAccessException {
@@ -80,7 +83,7 @@ public class Player extends BaseEntity implements Serializable {
 	}
 
 	@JsonIgnore
-	public void addPoints(Long points) {
+	public void addScore(Long points) {
 		if (this.score == null) {
 			this.score = 0L;
 		}
@@ -88,7 +91,7 @@ public class Player extends BaseEntity implements Serializable {
 	}
 
 	@JsonIgnore
-	public void removePoints(Long points) {
+	public void removeScore(Long points) {
 		if (this.score == null) {
 			this.score = 0L;
 		}
@@ -96,6 +99,22 @@ public class Player extends BaseEntity implements Serializable {
 		if (this.score < 0) {
 			this.score = 0L;
 		}
+	}
+
+	public Long getPoints() {
+		if (points == null) {
+			points = 0L;
+		}
+		return points;
+	}
+
+	public void setPoints(Long points) {
+		this.points = points;
+	}
+
+	public void addPoints(int i) {
+		this.points += i;
+
 	}
 
 }

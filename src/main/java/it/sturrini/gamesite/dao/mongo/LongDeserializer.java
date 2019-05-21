@@ -10,6 +10,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.IntNode;
 
 public class LongDeserializer extends JsonDeserializer<Long> {
 
@@ -20,6 +21,10 @@ public class LongDeserializer extends JsonDeserializer<Long> {
 	public Long deserialize(JsonParser jp, DeserializationContext dc) throws IOException, JsonProcessingException {
 
 		JsonNode tree = jp.getCodec().readTree(jp);
+		if (tree instanceof IntNode) {
+			long asLong = tree.asLong();
+			return asLong;
+		}
 		JsonNode jsonNode = tree.get("$numberLong");
 		if (jsonNode != null) {
 			Long id = jsonNode.asLong();

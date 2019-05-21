@@ -286,8 +286,8 @@ public class Map extends BaseEntity {
 			params.put("position.x", gi.getPosition().getX());
 			params.put("position.y", gi.getPosition().getY());
 			sf.setParams(params);
-			MapElement found = MapElementController.getInstance().find(sf);
-			String id2 = found.getId();
+			List<MapElement> found = MapElementController.getInstance().find(sf);
+			String id2 = found.get(0).getId();
 			boolean connected = isConnected(otherGii, id2, gi.getPosition(), excluded);
 			if (connected) {
 				return true;

@@ -21,16 +21,16 @@ import it.sturrini.gamesite.api.conf.ResourceUtil;
 import it.sturrini.gamesite.controllers.PlayerActionsController;
 import it.sturrini.gamesite.model.actions.MoveMapElementAction;
 
-@Path("/player/{id}")
+@Path("/player-action/{id}")
 @Consumes(MediaType.APPLICATION_JSON)
 public class PlayerActionsService extends BaseResource {
 
 	private static Logger log = LogManager.getLogger(PlayerActionsService.class);
 
 	@POST
-	@Path("/move-building")
+	@Path("/map-action")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response buildBuilding(@PathParam("id") String playerId, MoveMapElementAction a) {
+	public Response mapAction(@PathParam("id") String playerId, MoveMapElementAction a) {
 		BaseResponse res = buildBaseResponse();
 		try {
 			if (playerId == null) {

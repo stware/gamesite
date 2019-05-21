@@ -6,6 +6,7 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import it.sturrini.gamesite.controllers.game.ManagePlayers;
 import it.sturrini.gamesite.controllers.player.ManageScore;
 
 public class EventRulesExecutor {
@@ -37,13 +38,14 @@ public class EventRulesExecutor {
 	private void init() {
 		rules = new ArrayList<>();
 		rules.add(new ManageScore());
+		rules.add(new ManagePlayers());
 
 	}
 
-	public List<String> executeRules(Event e, Object source) {
+	public List<String> executeRules(String caller, Event e, Object source) {
 		List<String> errors = new ArrayList<>();
-		rules.stream().filter(r -> r.isExecutable(e, source)).forEach(r -> {
-			errors.addAll(r.execute(e, source));
+		rules.stream().filter(r -> r.isExecutable(caller, e, source)).forEach(r -> {
+			errors.addAll(r.execute(caller, e, source));
 		});
 		return errors;
 	}

@@ -83,11 +83,11 @@ public class MapElementController extends ControllerWithEvents {
 
 	}
 
-	public MapElement find(SearchFilter sf) throws GamesiteException {
+	public List<MapElement> find(SearchFilter sf) throws GamesiteException {
 
 		List<MapElement> players = MongoDao.getInstance(MapElement.class).findByFilter(sf);
 		if (players != null && players.size() > 0) {
-			return players.get(0);
+			return players;
 		} else {
 			throw new GamesiteException();
 		}

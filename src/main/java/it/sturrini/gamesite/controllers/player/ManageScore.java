@@ -22,21 +22,21 @@ public class ManageScore extends EventBaseRule implements EventRule {
 	}
 
 	@Override
-	public boolean isExecutable(Event e, Object source) {
-		return (e.equals(Event.create) || e.equals(Event.delete)) && source instanceof MapElement;
+	public boolean isExecutable(String caller, Event e, Object source) {
+		return caller.equals(PlayerController.class.getSimpleName()) && (e.equals(Event.create) || e.equals(Event.delete)) && source instanceof MapElement;
 	}
 
 	@Override
-	public List<String> execute(Event e, Object source) {
+	public List<String> execute(String caller, Event e, Object source) {
 		List<String> out = new ArrayList<>();
 		try {
 			MapElement me = (MapElement) source;
 
 			Player player = (Player) MongoDao.getInstance(Player.class).findById(me.getPlayerId());
 			if (e.equals(Event.create)) {
-				player.addPoints(me.getType().getPoints());
+				player.addScore(me.getType().getPoints());
 			} else {
-				player.removePoints(me.getType().getPoints());
+				player.removeScore(me.getType().getPoints());
 			}
 			boolean result = MongoDao.getInstance(Player.class).saveOrUpdate(player);
 			if (!result) {
