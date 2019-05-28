@@ -43,7 +43,7 @@ public class TimedExecutor {
 	}
 
 	private void start() {
-		scheduledFuture = ses.scheduleAtFixedRate(task, 1, 1, TimeUnit.SECONDS);
+		scheduledFuture = ses.scheduleAtFixedRate(task, 1000, 1000, TimeUnit.SECONDS);
 	}
 
 	Runnable task = () -> {

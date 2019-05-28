@@ -22,12 +22,12 @@ public class ManageScore extends EventBaseRule implements EventRule {
 	}
 
 	@Override
-	public boolean isExecutable(String caller, Event e, Object source) {
+	public boolean isExecutable(String caller, Event e, Object source, Object... args) {
 		return caller.equals(PlayerController.class.getSimpleName()) && (e.equals(Event.create) || e.equals(Event.delete)) && source instanceof MapElement;
 	}
 
 	@Override
-	public List<String> execute(String caller, Event e, Object source) {
+	public List<String> execute(String caller, Event e, Object source, Object... args) {
 		List<String> out = new ArrayList<>();
 		try {
 			MapElement me = (MapElement) source;

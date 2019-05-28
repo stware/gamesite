@@ -10,6 +10,7 @@ C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\conf\
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\map\MapTypes.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\events\Event.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\conf\HTTPServletUtil.java
+C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\research\Research.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\SimpleServlet.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\dao\mongo\ObjectIdSerializer.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\conf\GenericExceptionMapper.java
@@ -17,6 +18,7 @@ C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controlle
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\map\LandTypes.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\conf\JacksonConfigurator.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\dao\mongo\ObjectIdDeserializer.java
+C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\ResearchController.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\map\Map.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\actionrules\ActionRulesExecutor.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\MapService.java
@@ -26,7 +28,9 @@ C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\Games
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\map\Streets.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\game\ManagePlayers.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\Player.java
+C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\model\research\Researches.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\dao\MongoDao.java
+C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\ResearchService.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\controllers\player\ManageScore.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\conf\MimeTypeUtil.java
 C:\WORK\eclipse-workspace\game-site\src\main\java\it\sturrini\gamesite\api\conf\BaseResource.java

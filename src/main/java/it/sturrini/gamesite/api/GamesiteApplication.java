@@ -37,6 +37,7 @@ public class GamesiteApplication extends Application {
 		res.add(PlayerService.class);
 		res.add(PlayerActionsService.class);
 		res.add(MapService.class);
+		res.add(ResearchService.class);
 		return res;
 	}
 

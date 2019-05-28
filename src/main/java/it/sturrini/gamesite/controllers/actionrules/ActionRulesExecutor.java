@@ -17,6 +17,7 @@ public class ActionRulesExecutor {
 	private void init(Action a) {
 		rules = new ArrayList<>();
 		rules.add(new MapElementActionRule(a));
+		rules.add(new ResearchActionRule(a));
 
 	}
 

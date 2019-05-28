@@ -6,6 +6,6 @@ import it.sturrini.gamesite.model.BaseEntity;
 
 public interface EventListener {
 
-	List<String> onEvent(Event e, BaseEntity be);
+	List<String> onEvent(Event e, BaseEntity be, Object... args);
 
 }

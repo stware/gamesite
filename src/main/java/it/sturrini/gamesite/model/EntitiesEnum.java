@@ -7,7 +7,7 @@ package it.sturrini.gamesite.model;
  */
 public enum EntitiesEnum {
 
-	Player("Player", "players"), Map("Map", "maps"), MapElement("Map Element", "mapelements");
+	Player("Player", "players"), Map("Map", "maps"), MapElement("Map Element", "mapelements"), Research("Research", "researches");
 
 	private EntitiesEnum(String label, String collectionName) {
 		this.label = label;

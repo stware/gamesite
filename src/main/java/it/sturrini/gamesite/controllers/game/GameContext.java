@@ -57,9 +57,9 @@ public class GameContext extends ControllerWithEvents {
 	}
 
 	@Override
-	public List<String> onEvent(Event e, BaseEntity be) {
-		super.onEvent(e, be);
-		List<String> result = EventRulesExecutor.getInstance().executeRules(this.getClass().getSimpleName(), e, be);
+	public List<String> onEvent(Event e, BaseEntity be, Object... args) {
+		super.onEvent(e, be, args);
+		List<String> result = EventRulesExecutor.getInstance().executeRules(this.getClass().getSimpleName(), e, be, args);
 		return result;
 	}
 

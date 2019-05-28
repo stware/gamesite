@@ -24,16 +24,22 @@ public class MapElementActionRule extends ActionBaseRule implements ActionRule {
 
 	public MapElementActionRule(Action a) {
 		super(a);
-		nb = (MoveMapElementAction) this.a;
+		try {
+			nb = (MoveMapElementAction) this.a;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
 	}
 
 	@Override
 	public boolean isExecutable() {
-		return nb.getType().equals(ActionsEnum.MoveMapElement) && nb.getMapElement() != null && !(nb.getTo() == null && nb.getFrom() == null);
+		return nb != null && nb.getMapElement() != null && !(nb.getTo() == null && nb.getFrom() == null);
 	}
 
 	@Override
 	public List<String> execute() {
+
 		List<String> out = new ArrayList<>();
 		try {
 			Dimension bd = getMapElementDimension();

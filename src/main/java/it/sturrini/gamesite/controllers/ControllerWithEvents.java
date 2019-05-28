@@ -28,14 +28,14 @@ public abstract class ControllerWithEvents implements EventListener {
 		listeners.add(listener);
 	}
 
-	protected List<String> fireEvent(Event event, BaseEntity be) {
+	protected List<String> fireEvent(Event event, BaseEntity be, Object... args) {
 		log.debug(this.getClass().getSimpleName() + ": Firing event " + event.getType() + " on entity " + be.getClass().getSimpleName());
-		List<String> result = this.listeners.stream().map(listener -> listener.onEvent(event, be)).flatMap(Collection::stream).collect(Collectors.toList());
+		List<String> result = this.listeners.stream().map(listener -> listener.onEvent(event, be, args)).flatMap(Collection::stream).collect(Collectors.toList());
 		return result;
 	}
 
 	@Override
-	public List<String> onEvent(Event e, BaseEntity be) {
+	public List<String> onEvent(Event e, BaseEntity be, Object... args) {
 		log.debug(this.getClass().getSimpleName() + ": Event " + e.getType() + " fired on entity " + be);
 		return new ArrayList<>();
 

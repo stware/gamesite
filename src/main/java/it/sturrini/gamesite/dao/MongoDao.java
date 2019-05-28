@@ -170,9 +170,11 @@ public class MongoDao<T extends BaseEntity> {
 
 		FindIterable<Document> db;
 		List<T> out = new ArrayList<>();
-		if (andConditions.size() > 0) {
+		if (andConditions.size() > 1) {
 			Document filter = new Document("$and", andConditions);
 			db = c.find(filter);
+		} else if (andConditions.size() == 1) {
+			db = c.find(andConditions.get(0));
 		} else {
 			db = c.find();
 		}

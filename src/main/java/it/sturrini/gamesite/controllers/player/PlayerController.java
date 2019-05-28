@@ -13,6 +13,7 @@ import it.sturrini.gamesite.controllers.ControllerWithEvents;
 import it.sturrini.gamesite.controllers.MapController;
 import it.sturrini.gamesite.controllers.MapElementController;
 import it.sturrini.gamesite.controllers.game.GameContext;
+import it.sturrini.gamesite.controllers.researches.ResearchController;
 import it.sturrini.gamesite.dao.MongoDao;
 import it.sturrini.gamesite.dao.SearchFilter;
 import it.sturrini.gamesite.events.Event;
@@ -35,6 +36,7 @@ public class PlayerController extends ControllerWithEvents {
 	private void init() {
 		log.debug("Starting " + instance.getClass().getSimpleName() + "...");
 		MapElementController.getInstance().registerListener(this);
+		ResearchController.getInstance().registerListener(this);
 	}
 
 	public static PlayerController getInstance() {
@@ -150,9 +152,9 @@ public class PlayerController extends ControllerWithEvents {
 	}
 
 	@Override
-	public List<String> onEvent(Event e, BaseEntity be) {
-		super.onEvent(e, be);
-		List<String> result = EventRulesExecutor.getInstance().executeRules(this.getClass().getSimpleName(), e, be);
+	public List<String> onEvent(Event e, BaseEntity be, Object... args) {
+		super.onEvent(e, be, args);
+		List<String> result = EventRulesExecutor.getInstance().executeRules(this.getClass().getSimpleName(), e, be, args);
 		return result;
 	}
 

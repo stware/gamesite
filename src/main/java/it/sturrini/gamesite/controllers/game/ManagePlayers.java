@@ -20,12 +20,12 @@ public class ManagePlayers extends EventBaseRule implements EventRule {
 	}
 
 	@Override
-	public boolean isExecutable(String caller, Event e, Object source) {
+	public boolean isExecutable(String caller, Event e, Object source, Object... args) {
 		return caller.equals(GameContext.class.getSimpleName()) && (e.equals(Event.login)) && source instanceof Player;
 	}
 
 	@Override
-	public List<String> execute(String caller, Event e, Object source) {
+	public List<String> execute(String caller, Event e, Object source, Object... args) {
 		List<String> out = new ArrayList<>();
 		try {
 			Player p = (Player) source;

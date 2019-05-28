@@ -2,7 +2,7 @@ package it.sturrini.gamesite.events;
 
 public enum Event {
 
-	create("Create"), move("Move"), delete("Delete"), update("Update"), login("Login");
+	create("Create"), move("Move"), delete("Delete"), update("Update"), login("Login"), research("Research");
 
 	private Event(String type) {
 		this.type = type;

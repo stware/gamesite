@@ -32,9 +32,12 @@ public class Map extends BaseEntity {
 
 	private String playerId;
 
+	private Long people;
+
 	public Map() throws InstantiationException, IllegalAccessException {
 		super();
 		grid = new Grid<>(GridItem.class, 4, 4, 4);
+		people = 0L;
 	}
 
 	public Grid<GridItem> getGrid() {
@@ -320,6 +323,22 @@ public class Map extends BaseEntity {
 			}
 		}
 		return out;
+	}
+
+	public void addPeople(Long people) {
+		this.people += people;
+	}
+
+	public void removePeople(Long people) {
+		this.people -= people;
+	}
+
+	public Long getPeople() {
+		return people;
+	}
+
+	public void setPeople(Long people) {
+		this.people = people;
 	}
 
 }

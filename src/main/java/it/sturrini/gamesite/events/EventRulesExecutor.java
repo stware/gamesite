@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import it.sturrini.gamesite.controllers.game.ManagePlayers;
+import it.sturrini.gamesite.controllers.player.ManagePoints;
 import it.sturrini.gamesite.controllers.player.ManageScore;
 
 public class EventRulesExecutor {
@@ -39,13 +40,14 @@ public class EventRulesExecutor {
 		rules = new ArrayList<>();
 		rules.add(new ManageScore());
 		rules.add(new ManagePlayers());
+		rules.add(new ManagePoints());
 
 	}
 
-	public List<String> executeRules(String caller, Event e, Object source) {
+	public List<String> executeRules(String caller, Event e, Object source, Object... args) {
 		List<String> errors = new ArrayList<>();
-		rules.stream().filter(r -> r.isExecutable(caller, e, source)).forEach(r -> {
-			errors.addAll(r.execute(caller, e, source));
+		rules.stream().filter(r -> r.isExecutable(caller, e, source, args)).forEach(r -> {
+			errors.addAll(r.execute(caller, e, source, args));
 		});
 		return errors;
 	}

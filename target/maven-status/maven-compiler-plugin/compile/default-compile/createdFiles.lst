@@ -2,6 +2,7 @@ it\sturrini\gamesite\controllers\actionrules\ActionRulesExecutor.class
 it\sturrini\SimpleServlet.class
 it\sturrini\common\Constants.class
 it\sturrini\gamesite\api\conf\ResourceUtil$1.class
+it\sturrini\gamesite\model\research\Researches.class
 it\sturrini\gamesite\events\EventListener.class
 it\sturrini\gamesite\model\Grid.class
 it\sturrini\gamesite\model\map\MapTypes.class
@@ -47,6 +48,7 @@ it\sturrini\gamesite\dao\mongo\ObjectIdDeserializer.class
 it\sturrini\common\DateUtils.class
 it\sturrini\gamesite\api\conf\BaseResponse.class
 it\sturrini\gamesite\server\GameServer.class
+it\sturrini\gamesite\controllers\ResearchController.class
 it\sturrini\gamesite\model\map\MapElement.class
 it\sturrini\gamesite\model\EntitiesEnum.class
 it\sturrini\gamesite\model\map\LandTypes.class
@@ -66,3 +68,5 @@ it\sturrini\gamesite\dao\MongoDao.class
 it\sturrini\gamesite\api\PlayerActionsService.class
 it\sturrini\gamesite\model\Player.class
 it\sturrini\gamesite\dao\SearchFilter.class
+it\sturrini\gamesite\model\research\Research.class
+it\sturrini\gamesite\api\ResearchService.class
